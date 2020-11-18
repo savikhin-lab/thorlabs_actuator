@@ -87,7 +87,6 @@ class Actuator:
         """
         actuator.CC_ClearMessageQueue(self._serial)
         pos = int(np.floor(self._wl_interp(wl)))
-        click.echo(pos)
         res = actuator.CC_SetMoveAbsolutePosition(self._serial, pos)
         if res != 0:
             sys.exit(f"Failed to set move position. Error: {res}")
