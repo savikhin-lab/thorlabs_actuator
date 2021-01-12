@@ -55,7 +55,7 @@ def move(new_pos, is_steps):
     """
     act = Actuator()
     if is_steps:
-        act.move(new_pos)
+        act.move(int(new_pos))
     else:
         act.move_wl(new_pos)
     return
